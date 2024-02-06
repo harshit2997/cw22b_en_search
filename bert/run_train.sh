@@ -1,0 +1,19 @@
+sbatch -n 8 -N 1 -p gpu --gpus=4 --mem=100G --time=0 --nodelist=boston-2-29 \
+  --wrap="torchrun --nproc_per_node 4 train.py \
+  --output_dir /ssd/hmehrotr/models_roberta_marco_no_url \
+  --model_name_or_path roberta-base \
+  --do_train \
+  --save_steps 2000 \
+  --train_dir /ssd/hmehrotr/marco_data_no_url \
+  --max_len 512 \
+  --fp16 \
+  --per_device_train_batch_size 1 \
+  --train_group_size 8 \
+  --gradient_accumulation_steps 1 \
+  --per_device_eval_batch_size 64 \
+  --warmup_ratio 0.1 \
+  --weight_decay 0.01 \
+  --learning_rate 1e-5 \
+  --num_train_epochs 2 \
+  --overwrite_output_dir \
+  --dataloader_num_workers 8"
