@@ -10,3 +10,5 @@ The repository is organized as follows:
 4. `query_3k.tsv`: A set of 2110 queries we used for evaluation.
 5. `qrel_3k.tsv`: Relevance judgements on the 2110 queries.
 6. `trec_eval-9.0.7`: A copy of the trec_eval software available [here](https://trec.nist.gov/trec_eval/). Instructions to use it are present [here](http://www.rafaelglater.com/en/post/learn-how-to-use-trec_eval-to-evaluate-your-information-retrieval-system).
+
+Project report - https://arxiv.org/pdf/2402.04357.pdf
